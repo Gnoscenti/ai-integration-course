@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap');
+
+html, body {
+  margin: 0;
+  font-family: theme('fontFamily.sans'); /* Default to Open Sans */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #111827; /* Tailwind gray-900 as a default site background */
+  color: #f3f4f6; /* Tailwind gray-100 as default text color */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Global heading styles (optional, can also be applied per component) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: theme('fontFamily.headings'); /* Montserrat for headings */
+}
+
+/* Add any other global styles or overrides here */
+
