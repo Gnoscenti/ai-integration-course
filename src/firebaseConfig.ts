@@ -3,7 +3,7 @@
 // and not hardcoded directly in the source code.
 
 const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY", // Replace with your actual API key from Firebase console
+  apiKey: "AIzaSyC7f1xf4Rx1fvwn9_1luGK4m1aQonFiibE", // Replace with your actual API key from Firebase console
   authDomain: "goldenaige.firebaseapp.com",
   projectId: "goldenaige",
   storageBucket: "goldenaige.appspot.com",
