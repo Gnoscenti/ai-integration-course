@@ -7,6 +7,7 @@ import LessonPage from './pages/LessonPage';
 import PersonalizedRecapPage from './pages/PersonalizedRecapPage';
 import LoginPage from './components/auth/LoginPage';
 import SignupPage from './components/auth/SignupPage';
+import ProfilePage from './components/auth/ProfilePage';
 
 const App: React.FC = () => {
   return (
@@ -19,8 +20,10 @@ const App: React.FC = () => {
           {/* Updated route for specific lessons to include course and module context */}
           <Route path="courses/:courseId/modules/:moduleId/lessons/:lessonId" element={<LessonPage />} />
           <Route path="recap" element={<PersonalizedRecapPage />} />
-          <Route path="login" element={<LoginPage />} />
-          <Route path="signup" element={<SignupPage />} />
+          <Route pat/h="login" element={<LoginPage />} />
+             <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </Router>
