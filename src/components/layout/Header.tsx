@@ -7,8 +7,8 @@ const Header: React.FC = () => {
       <nav className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-xl font-bold">AI Integration Course</Link>
         <div>
-          <Link to="/courses" className="mr-4 hover:text-gray-300CoursesCourse</Link>
-          {/* Add Login/Signup/Profile links later */}
+               <Link to="/courses" className="mr-4 hover:text-gray-300">Courses</Link>
+     
           <Link to="/login" className="mr-4 hover:text-gray-300">Login</Link>
           <Link to="/signup" className="hover:text-gray-300">Sign Up</Link>
         </div>
