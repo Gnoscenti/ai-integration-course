@@ -20,8 +20,7 @@ const App: React.FC = () => {
           {/* Updated route for specific lessons to include course and module context */}
           <Route path="courses/:courseId/modules/:moduleId/lessons/:lessonId" element={<LessonPage />} />
           <Route path="recap" element={<PersonalizedRecapPage />} />
-          <Route pat/h="login" element={<LoginPage />} />
-             <Route path="/login" element={<LoginPage />} />
+       <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         </Route>
