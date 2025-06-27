@@ -28,7 +28,7 @@ const Header: React.FC = () => {
           }>
             Home
           </NavLink>
-          <NavLink to="/course" className={({ isActive }) => 
+          <NavLink to="/courses" className={({ isActive }) => 
             `hover:text-blue-200 transition-colors ${isActive ? 'font-headings font-bold text-blue-100' : ''}`
           }>
             Courses
