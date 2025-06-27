@@ -72,6 +72,34 @@ const CourseOverviewPage: React.FC = () => {
       <div className="bg-white shadow-xl rounded-lg p-6 md:p-8">
         <h1 className="text-4xl font-headings font-bold mb-4 text-gray-800">{course.title}</h1>
         <p className="text-lg text-gray-600 mb-8 font-sans">{course.description}</p>
+                {/* Lesson dropdown */}
+        <select
+          className="mb-6 px-3 py-2 border rounded w-full md:w-1/2"
+          defaultValue=""
+          onChange={(e) => {
+            const value = e.target.value;
+            if (!value) return;
+            const [moduleId, lessonId] = value.split('|');
+            const selectedModule = course.modules.find((m) => m.id === moduleId);
+            const selectedLesson = selectedModule?.lessons.find((l) => l.id === lessonId);
+            if (selectedLesson) {
+              handleLessonClick(selectedLesson, moduleId);
+            }
+          }}
+        >
+          <option value="">Select a lesson</option>
+          {course.modules.map((module) =>
+            module.lessons.map((lesson) => (
+              <option
+                key={`${module.id}|${lesson.id}`}
+                value={`${module.id}|${lesson.id}`}
+                disabled={!lesson.isFree && !currentUser}
+              >
+                {module.title} - {lesson.title} {lesson.isFree ? '(Free)' : ''}
+              </option>
+            ))
+          )}
+        </select>
 
         {course.modules.map((module: Module) => (
           <div key={module.id} className="mb-10 p-6 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow duration-300">
