@@ -59,7 +59,7 @@ const PaymentSuccessPage: React.FC = () => {
       <p>Thank you for your subscription. Your access has been updated.</p>
       <p className="text-sm text-gray-600 mt-2">Session ID: {sessionId}</p>
       <div className="mt-6">
-        <Link to="/course-overview" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
+        <Link to="/courses" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2">
           Go to Course Overview
         </Link>
         <Link to="/" className="text-blue-500 hover:underline">
