@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { getCourses, getUserCourseProgress } from '../firebaseService'; // Import Firestore service
 import { Course, Module, Lesson, UserCourseProgress } from '../types/course'; // Import types
 import { useAuth } from '../context/AuthContext'; // For gating logic
+import mockCourseData from '../mockCCourseData
 
 const CourseOverviewPage: React.FC = () => {
   const { currentUser } = useAuth();
@@ -25,12 +26,14 @@ const CourseOverviewPage: React.FC = () => {
             setUserProgress(progress);
           }
         } else {
-          setError('No courses found.');
-        }
+        } else {
+        setCourse(mockCourseData[0]);
+        setError('No courses found in Firestore. Showing mock data.');
       } catch (err) {
-        console.error("Error fetching course data:", err);
-        setError('Failed to load course data.');
-      }
+      console.error("Error fetching course data:", err);
+      setCourse(mockCourseData[0]);
+      setError('Failed to load course data from Firestore. Showing mock data.');
+    }
       setLoading(false);
     };
 
